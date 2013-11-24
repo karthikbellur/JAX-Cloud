@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="JAXCloud" extends="json-default">
+        
+        <action name="home">
+            <result>Home.jsp</result>
+        </action>
+		
+		<action name="logout" method="doLogout" class="com.action.LoginAction">
+        	<result name="*">Home.jsp</result>        	
+    	</action>
+    	
+        <action name="myacc" method="doLogin" class="com.action.LoginAction">
+        	<result>MyAcc.jsp</result>
+        	<result name="input">Home.jsp</result>
+    	</action>
+    	
+    	<action name="executeInputCodeView">
+    		<result>ExecuteInputCode.jsp</result>
+    	</action>
+    	
+    	<action name="executeCommand" class="com.action.VMAction">
+        	<result name="success">DisplayResults.jsp</result>      
+        	<result name="input">MyAcc.jsp</result>  	
+    	</action>
+		
+		<action name="executeShellCmdView">
+			<result>ExecuteShellCmd.jsp</result>
+		</action>
+		
+    	<action name="executeShellCmd" method="executeCommand" class="com.action.ExecuteShellCmdAction">
+    		<result type="json"/>
+    		<param name="commandName"></param>
+            <param name="platform"></param>
+    		<result name="*">ExecuteShellCmd.jsp</result>
+    	</action>
+    </package>
+
+</struts>

@@ -1,0 +1,194 @@
+The whole 64 squares has been divided into 8 columns of 
+8 squares each. the first entry tells the row of the 
+position of the queen in that particular column
+the second entry tells the row of the queen in the secondcolumn
+Like this, 8 entries per sln are given. 
+Two slns might match if the slns which are identical with respect to
+the diagonals of the board or the centre line of the board
+Total num of slns is printed at the end
+sln no 1:   1	5	8	6	3	7	2	4
+
+sln no 2:   1	6	8	3	7	4	2	5
+
+sln no 3:   1	7	4	6	8	2	5	3
+
+sln no 4:   1	7	5	8	2	4	6	3
+
+sln no 5:   2	4	6	8	3	1	7	5
+
+sln no 6:   2	5	7	1	3	8	6	4
+
+sln no 7:   2	5	7	4	1	8	6	3
+
+sln no 8:   2	6	1	7	4	8	3	5
+
+sln no 9:   2	6	8	3	1	4	7	5
+
+sln no 10:   2	7	3	6	8	5	1	4
+
+sln no 11:   2	7	5	8	1	4	6	3
+
+sln no 12:   2	8	6	1	3	5	7	4
+
+sln no 13:   3	1	7	5	8	2	4	6
+
+sln no 14:   3	5	2	8	1	7	4	6
+
+sln no 15:   3	5	2	8	6	4	7	1
+
+sln no 16:   3	5	7	1	4	2	8	6
+
+sln no 17:   3	5	8	4	1	7	2	6
+
+sln no 18:   3	6	2	5	8	1	7	4
+
+sln no 19:   3	6	2	7	1	4	8	5
+
+sln no 20:   3	6	2	7	5	1	8	4
+
+sln no 21:   3	6	4	1	8	5	7	2
+
+sln no 22:   3	6	4	2	8	5	7	1
+
+sln no 23:   3	6	8	1	4	7	5	2
+
+sln no 24:   3	6	8	1	5	7	2	4
+
+sln no 25:   3	6	8	2	4	1	7	5
+
+sln no 26:   3	7	2	8	5	1	4	6
+
+sln no 27:   3	7	2	8	6	4	1	5
+
+sln no 28:   3	8	4	7	1	6	2	5
+
+sln no 29:   4	1	5	8	2	7	3	6
+
+sln no 30:   4	1	5	8	6	3	7	2
+
+sln no 31:   4	2	5	8	6	1	3	7
+
+sln no 32:   4	2	7	3	6	8	1	5
+
+sln no 33:   4	2	7	3	6	8	5	1
+
+sln no 34:   4	2	7	5	1	8	6	3
+
+sln no 35:   4	2	8	5	7	1	3	6
+
+sln no 36:   4	2	8	6	1	3	5	7
+
+sln no 37:   4	6	1	5	2	8	3	7
+
+sln no 38:   4	6	8	2	7	1	3	5
+
+sln no 39:   4	6	8	3	1	7	5	2
+
+sln no 40:   4	7	1	8	5	2	6	3
+
+sln no 41:   4	7	3	8	2	5	1	6
+
+sln no 42:   4	7	5	2	6	1	3	8
+
+sln no 43:   4	7	5	3	1	6	8	2
+
+sln no 44:   4	8	1	3	6	2	7	5
+
+sln no 45:   4	8	1	5	7	2	6	3
+
+sln no 46:   4	8	5	3	1	7	2	6
+
+sln no 47:   5	1	4	6	8	2	7	3
+
+sln no 48:   5	1	8	4	2	7	3	6
+
+sln no 49:   5	1	8	6	3	7	2	4
+
+sln no 50:   5	2	4	6	8	3	1	7
+
+sln no 51:   5	2	4	7	3	8	6	1
+
+sln no 52:   5	2	6	1	7	4	8	3
+
+sln no 53:   5	2	8	1	4	7	3	6
+
+sln no 54:   5	3	1	6	8	2	4	7
+
+sln no 55:   5	3	1	7	2	8	6	4
+
+sln no 56:   5	3	8	4	7	1	6	2
+
+sln no 57:   5	7	1	3	8	6	4	2
+
+sln no 58:   5	7	1	4	2	8	6	3
+
+sln no 59:   5	7	2	4	8	1	3	6
+
+sln no 60:   5	7	2	6	3	1	4	8
+
+sln no 61:   5	7	2	6	3	1	8	4
+
+sln no 62:   5	7	4	1	3	8	6	2
+
+sln no 63:   5	8	4	1	3	6	2	7
+
+sln no 64:   5	8	4	1	7	2	6	3
+
+sln no 65:   6	1	5	2	8	3	7	4
+
+sln no 66:   6	2	7	1	3	5	8	4
+
+sln no 67:   6	2	7	1	4	8	5	3
+
+sln no 68:   6	3	1	7	5	8	2	4
+
+sln no 69:   6	3	1	8	4	2	7	5
+
+sln no 70:   6	3	1	8	5	2	4	7
+
+sln no 71:   6	3	5	7	1	4	2	8
+
+sln no 72:   6	3	5	8	1	4	2	7
+
+sln no 73:   6	3	7	2	4	8	1	5
+
+sln no 74:   6	3	7	2	8	5	1	4
+
+sln no 75:   6	3	7	4	1	8	2	5
+
+sln no 76:   6	4	1	5	8	2	7	3
+
+sln no 77:   6	4	2	8	5	7	1	3
+
+sln no 78:   6	4	7	1	3	5	2	8
+
+sln no 79:   6	4	7	1	8	2	5	3
+
+sln no 80:   6	8	2	4	1	7	5	3
+
+sln no 81:   7	1	3	8	6	4	2	5
+
+sln no 82:   7	2	4	1	8	5	3	6
+
+sln no 83:   7	2	6	3	1	4	8	5
+
+sln no 84:   7	3	1	6	8	5	2	4
+
+sln no 85:   7	3	8	2	5	1	6	4
+
+sln no 86:   7	4	2	5	8	1	3	6
+
+sln no 87:   7	4	2	8	6	1	3	5
+
+sln no 88:   7	5	3	1	6	8	2	4
+
+sln no 89:   8	2	4	1	7	5	3	6
+
+sln no 90:   8	2	5	3	1	7	4	6
+
+sln no 91:   8	3	1	6	2	5	7	4
+
+sln no 92:   8	4	1	3	6	2	7	5
+
+
+no of slns=92

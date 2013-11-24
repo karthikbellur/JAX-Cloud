@@ -1,0 +1,58 @@
+ -v  Print (on standard error output) the commands executed to run the stages of compilation.  Also print the version number of the compiler driver
+           program and of the preprocessor and the compiler proper.
+
+-S  Stop after the stage of compilation proper; do not assemble.  The output is in the form of an assembler code file for each non-assembler input
+           file specified.
+
+           By default, the assembler file name for a source file is made by replacing the suffix .c, .i, etc., with .s.
+
+           Input files that don't require compilation are ignored.
+
+-E  Stop after the preprocessing stage; do not run the compiler proper.  The output is in the form of preprocessed source code, which is sent to
+           the standard output.
+
+           Input files which don't require preprocessing are ignored.
+		   
+ -Q  Makes the compiler print out each function name as it is compiled, and print some statistics about each pass when it finishes.
+
+-time
+           Report the CPU time taken by each subprocess in the compilation sequence.  For C source files, this is the compiler proper and assembler (plus
+           the linker if linking is done).  The output looks like this:
+
+                   # cc1 0.12 0.01
+                   # as 0.00 0.01
+
+           The first number on each line is the "user time", that is time spent executing the program itself.  The second number is "system time", time
+           spent executing operating system routines on behalf of the program.  Both numbers are in seconds.
+
+	-O1 Optimize.  Optimizing compilation takes somewhat more time, and a lot more memory for a large function.
+
+           With -O, the compiler tries to reduce code size and execution time, without performing any optimizations that take a great deal of compilation
+           time.
+
+           -O turns on the following optimization flags:
+
+           -fauto-inc-dec -fcprop-registers -fdce -fdefer-pop -fdelayed-branch -fdse -fguess-branch-probability -fif-conversion2 -fif-conversion
+           -finline-small-functions -fipa-pure-const -fipa-reference -fmerge-constants -fsplit-wide-types -ftree-builtin-call-dce -ftree-ccp -ftree-ch
+           -ftree-copyrename -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-fre -ftree-sra -ftree-ter -funit-at-a-time
+
+           -O also turns on -fomit-frame-pointer on machines where doing so does not interfere with debugging.
+
+       -O2 Optimize even more.  GCC performs nearly all supported optimizations that do not involve a space-speed tradeoff.  As compared to -O, this
+           option increases both compilation time and the performance of the generated code.
+
+           -O2 turns on all optimization flags specified by -O.  It also turns on the following optimization flags: -fthread-jumps -falign-functions
+           -falign-jumps -falign-loops  -falign-labels -fcaller-saves -fcrossjumping -fcse-follow-jumps  -fcse-skip-blocks -fdelete-null-pointer-checks
+           -fexpensive-optimizations -fgcse  -fgcse-lm -findirect-inlining -foptimize-sibling-calls -fpeephole2 -fregmove -freorder-blocks
+           -freorder-functions -frerun-cse-after-loop -fsched-interblock  -fsched-spec -fschedule-insns  -fschedule-insns2 -fstrict-aliasing
+           -fstrict-overflow -ftree-switch-conversion -ftree-pre -ftree-vrp
+
+           Please note the warning under -fgcse about invoking -O2 on programs that use computed gotos.
+
+           NOTE: In Ubuntu 8.10 and later versions, -D_FORTIFY_SOURCE=2 is set by default, and is activated when -O is set to 2 or higher.  This enables
+           additional compile-time and run-time checks for several libc functions.  To disable, specify either -U_FORTIFY_SOURCE or -D_FORTIFY_SOURCE=0.
+
+       -O3 Optimize yet more.  -O3 turns on all optimizations specified by -O2 and also turns on the -finline-functions, -funswitch-loops,
+           -fpredictive-commoning, -fgcse-after-reload and -ftree-vectorize options.
+	   
+		   
